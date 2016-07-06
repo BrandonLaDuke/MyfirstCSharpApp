@@ -14,7 +14,7 @@ namespace MyfirstCSharpApp
             String emailAddress = "";
             String phoneNumber = "";
             int age = 0;
-            Char confirm = 'x';
+            boolean confirm = false; //Set boolean to confirm.
 
             Console.WriteLine("Hello World!");
             Console.WriteLine("What's your name?");
