@@ -10,25 +10,37 @@ namespace MyfirstCSharpApp
     {
         static void Main(string[] args)
         {
+            // Initialze Varribles
             String userName = "";
             String emailAddress = "";
             String phoneNumber = "";
-            int age = 0;
-            Char confirm = 'x';
+            String age = "";
+            Boolean confirm = false;
 
             Console.WriteLine("Hello World!");
+            // Ask for users name
             Console.WriteLine("What's your name?");
             userName = Console.ReadLine();
             Console.WriteLine("Hello " + userName + ", it's nice to meet you!");
+            // Ask for users age
             Console.WriteLine("How old are you " + userName + "?");
-            age = Console.Read();
-            Console.ReadLine();
+            age = Console.ReadLine();
+            // Ask for users phone number
             Console.WriteLine("What is your Phone Number?");
             phoneNumber = Console.ReadLine();
+            // Ask for users email
             Console.WriteLine("What is your eamil address?");
             emailAddress = Console.ReadLine();
-            Console.WriteLine("\nSo your " + userName + " and you are " + age + " years old. \nYour email address is: " + emailAddress + "\nand your phone number is: " + phoneNumber + ". Correct? \n\n(Y) Yes, (N) No");
-            Console.Read();
+            // Confirm We got it correct
+            //Console.WriteLine("\nSo your " + userName + " and you are " + age + " years old. \nYour email address is: " + emailAddress + "\nand your phone number is: " + phoneNumber + ". Correct? \n\n(Y) Yes, (N) No");
+            
+            // Create String Array called lines
+            string[] lines = { "Name: " + userName + ",", "Age: " + age + ",", "Phone Number: " + phoneNumber + ",", "Email: " + emailAddress };
+            // Write to File
+            System.IO.File.WriteAllLines(@"C:\Users\bladuk8617\Documents\Visual Studio 2012\Projects\MyfirstCSharpApp\WriteLines.txt", lines);
+            // Tell user that their file has been created
+            Console.WriteLine(userName + ", your info has been saved to WriteLines.txt\n\nPress Enter to Quit");
+            Console.ReadLine();
         }
     }
 }
