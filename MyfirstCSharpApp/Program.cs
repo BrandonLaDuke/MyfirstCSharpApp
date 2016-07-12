@@ -14,8 +14,13 @@ namespace MyfirstCSharpApp
             String userName = "";
             String emailAddress = "";
             String phoneNumber = "";
+<<<<<<< HEAD
             String age = "";
             Boolean confirm = false;
+=======
+            int age = 0;
+            boolean confirm = false; //Set boolean to confirm.
+>>>>>>> origin/master
 
             Console.WriteLine("Hello World!");
             // Ask for users name
